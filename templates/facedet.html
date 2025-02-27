@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Patient Monitoring</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      text-align: center;
+      margin: 0;
+      padding: 20px;
+    }
+    .video-container {
+      display: inline-block;
+      border: 2px solid #3a7bd5;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+  </style>
+</head>
+<body>
+  <h1>Live Patient Monitoring</h1>
+  <div class="video-container">
+    <!-- The live video feed is attached here via the /video_feed route -->
+    <img src="{{ url_for('video_feed') }}" alt="Live Video Feed" width="640" height="480" />
+  </div>
+  <p>Press any key in the video window to stop the stream (close the window to end).</p>
+</body>
+</html>
